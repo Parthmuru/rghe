@@ -4,7 +4,7 @@ draw_circle = "";
 draw_rect = "";
  
 var SpeechRecognition = window.webkitSpeechRecognition;
-recognition = new SpeechRecognition();
+var recognition = new SpeechRecognition();
 
 function start(){
     document.getElementById("status").innerHTML = "Pl speek the system is listening or I will force u to do.";
@@ -35,7 +35,7 @@ function setup(){
 
 function draw(){
     if(draw_circle == "set"){
-        radius = Math.floor(Math.round() * 100);
+        radius = Math.floor(Math.random() * 100);
         circle(x,y,radius);
         document.getElementById("status").innerHTML = "Circle is drawn dont u see so beuatifull corcle!!!!!!";
         draw_circle = "";
